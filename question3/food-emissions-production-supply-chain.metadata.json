@@ -1,0 +1,52 @@
+{
+  "chart": {
+    "title": "Food: emissions from production and the supply chain",
+    "subtitle": "[Greenhouse gas emissions](#dod:ghgemissions) are measured in kilograms of [carbon dioxide-equivalents](#dod:carbondioxideequivalents) (CO₂eq) per kilogram of food.",
+    "citation": "Joseph Poore and Thomas Nemecek (2018).",
+    "originalChartUrl": "https://ourworldindata.org/grapher/food-emissions-production-supply-chain?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Bananas",
+      "Beef (beef herd)",
+      "Wheat & Rye",
+      "Milk",
+      "Maize",
+      "Lamb & Mutton",
+      "Eggs",
+      "Fish (farmed)",
+      "Soy milk",
+      "Tofu",
+      "Rice",
+      "Poultry Meat",
+      "Potatoes",
+      "Pig Meat",
+      "Peas",
+      "Beef (dairy herd)"
+    ]
+  },
+  "columns": {
+    "food_emissions_land_plus_farm": {
+      "titleShort": "Land use change, on-farm, and animal feed",
+      "titleLong": "Land use change, on-farm, and animal feed",
+      "unit": "",
+      "timespan": "",
+      "type": "Numeric",
+      "owidVariableId": 525626,
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Land use change, on-farm, and animal feed” [dataset]. Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992. [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/525626.metadata.json"
+    },
+    "food_emissions_supply_chain": {
+      "titleShort": "Supply chain (processing, transport, packaging, retail)",
+      "titleLong": "Supply chain (processing, transport, packaging, retail)",
+      "unit": "",
+      "timespan": "",
+      "type": "Numeric",
+      "owidVariableId": 525627,
+      "citationShort": " – processed by Our World in Data",
+      "citationLong": " – processed by Our World in Data. “Supply chain (processing, transport, packaging, retail)” [dataset]. Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992. [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/525627.metadata.json"
+    }
+  },
+  "dateDownloaded": "2026-02-17",
+  "activeFilters": {}
+}
