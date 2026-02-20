@@ -102,7 +102,9 @@ worldH = climateChange %>%
   filter(Entity == "World")
 worldco2 = datCO2 %>%
   filter(Entity == "World") %>%
-worldco2$CO2 = worldco2$CO2/1000000
+  filter(Year>=1880) 
+worldco2$CO2 = worldco2$CO2/1000000 
+
 
 ggplot(worldco2, aes(x=Year, y=CO2))+
   geom_line()+
@@ -115,6 +117,15 @@ ggplot(worldH, aes(x=date,y=temperature_anomaly))+
   theme_classic()
 
 # Question 3
-foodEmissions = read.csv("/cloud/project/question3/food-emissions-production-supply-chain.csv")
-colnames(foodEmissions)[3] = "CO2"
-ggplot()
+foodEmissions = read.csv("/cloud/project/activity03/eutrophying-emissions-protein.csv")
+colnames(foodEmissions)[3] = "emissions"
+foodSort = foodEmissions %>%
+  arrange(emissions)
+foodSort$type = factor(foodSort$Entity,levels = foodSort$Entity)
+
+ggplot(foodSort, aes(type,emissions))+
+  geom_col()+
+  coord_flip()+
+  labs(y="Eutrophying emissions (gPO₄eq per 100 grams of protein)",x="Food")+
+  geom_text(aes(y=emissions+3,x=as.numeric(type),label = round(emissions,0)))+
+  theme(text = element_text(size=14))
